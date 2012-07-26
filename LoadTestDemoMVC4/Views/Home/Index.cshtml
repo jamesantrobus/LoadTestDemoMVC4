@@ -1,0 +1,23 @@
+﻿@model LoadTestDemoMVC4.Controllers.HomeViewModel
+
+@{
+	ViewBag.Title = "Home";	
+}
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Home</title>
+	</head>
+	<body>
+		<h2>Home</h2>
+		
+		@using (Html.BeginForm())
+		{
+			@Html.EditorFor(x => x.Name)
+			<input type="submit" value="Submit page"/>
+			@Html.AntiForgeryToken()
+		}
+	</body>	
+</html>
